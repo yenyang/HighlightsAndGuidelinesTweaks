@@ -1,4 +1,4 @@
-﻿// <copyright file="ModifyEventPrefabsSystem.cs" company="Yenyangs Mods. MIT License">
+﻿// <copyright file="ModifyRenderingSettingsPrefabSystem.cs" company="Yenyangs Mods. MIT License">
 // Copyright (c) Yenyangs Mods. MIT License. All rights reserved.
 // </copyright>
 
@@ -12,7 +12,7 @@ namespace HighlightsAndGuidelinesTweaks.Systems
     using Unity.Entities;
 
     /// <summary>
-    /// Modifies the probability of events.
+    /// Modifies the rending and guidelines setting components on rendering settings prefab.
     /// </summary>
     public partial class ModifyRenderingSettingsPrefabSystem : GameSystemBase
     {
@@ -53,7 +53,7 @@ namespace HighlightsAndGuidelinesTweaks.Systems
 
 
         /// <summary>
-        /// Sets the probability of fire event to vanilla.
+        /// Needs to be modified to reset prefab components related to this project.
         /// </summary>
         public void ResetFireProbability(PrefabID prefabID)
         {
@@ -87,6 +87,7 @@ namespace HighlightsAndGuidelinesTweaks.Systems
             return;
         }
 
+        // Hard coded. Proof of concept.
         protected override void OnGameLoadingComplete(Purpose purpose, GameMode mode)
         {
             base.OnGameLoadingComplete(purpose, mode);
